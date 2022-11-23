@@ -40,3 +40,15 @@
 ```
 20. Click Properties
 21. Scroll all the way down and click on the URL of your [stateless website hosted in AWS S3](http://new-bucket-for-my-github-documentation.s3-website-us-east-1.amazonaws.com/)!
+
+### 2. Migrate infrastructures to AWS EC2
+
+1. Go to EC2 (Elastic Compute Cloud)
+2. Click "Launch Instance" x2
+3. Name your server, e.g webserver01
+4. Under "Quick Start" make sure that Amazon Linux is selected
+5. Make sure that the Amazon Mahcine Image is Amazon Linux 2 AMI
+6. Make sure that the Instance Type is t2.micro
+7. Under Key Pair, select "Proceed without a key pair"
+8. Under Network Settings, click Edit
+9. (...)
