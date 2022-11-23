@@ -19,7 +19,7 @@
 16. Make sure the "Block all public access" is off
 17. Click edit on the Bucket policy
 18. Copy your bucket ARN
-19 Enter this policy code with your updated bucket ARN, then save changes
+19. Enter this policy code with your updated bucket ARN, then save changes
 
 ```
 {
