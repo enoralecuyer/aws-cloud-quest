@@ -1,6 +1,6 @@
 # aws-cloud-quest
 
-### 1. Migrate a stateless website to an AWS S3 Bucket
+## 1. Migrate a stateless website to an AWS S3 Bucket
 1. Log into AWS
 2. Go to S3 (Simple Storage Service) 
 3. Create a Bucket and save the name on your notepad (e.g new-bucket-for-my-github-documentation)
@@ -40,8 +40,10 @@
 ```
 20. Click Properties
 21. Scroll all the way down and click on the URL of your [stateless website hosted in AWS S3](http://new-bucket-for-my-github-documentation.s3-website-us-east-1.amazonaws.com/)!
+![2](https://user-images.githubusercontent.com/48727972/203665691-6c87c817-aa01-43d1-a7e0-48f0dbb7ebf7.png)
 
-### 2. Migrate infrastructures to AWS EC2
+
+## 2. Migrate infrastructures to AWS EC2
 
 1. Go to EC2 (Elastic Compute Cloud)
 2. Click "Launch Instance" x2
@@ -168,4 +170,5 @@ sudo service httpd start
 20. Select your instance, make sure your instance is running
 21. Copy your public IPv4 DNS (not the address!) and paste it into your broswer, e.g. ec2-18-144-7-69.us-west-1.compute.amazonaws.com
 
+![1](https://user-images.githubusercontent.com/48727972/203665630-922d854e-d31a-4eaf-99ab-8fdda3fa5af2.png)
 
