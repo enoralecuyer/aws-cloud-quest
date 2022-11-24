@@ -172,3 +172,4 @@ sudo service httpd start
 
 ![1](https://user-images.githubusercontent.com/48727972/203665630-922d854e-d31a-4eaf-99ab-8fdda3fa5af2.png)
 
+## 3. Increase the AWS EC2 Instance Size
