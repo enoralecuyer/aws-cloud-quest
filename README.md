@@ -236,7 +236,7 @@ service lab start
 18. Then restart the instance by clicking on Instance > Instance State > Start Instance. The Public IPv4 address and DNS are now generated
 
 
-### 4. AWS Pricing Calculator
+### 4. Create price estimates with the AWS Pricing Calculator
 1. Go to https://calculator.aws
 2. Click Create Estimate
 3. Click My Estimate (top left corner)
@@ -261,3 +261,24 @@ service lab start
 21. Click Show Calculation, review your data, then click Save and Add Service
 22. Click View Summary
 23. Click Share > Agree and Continue > Copy public link 
+
+### 5. Troubleshoot and connect Web Server and Database Server
+1. Go to EC2
+2. Click Instances
+3. Select the Web Server and copy the Public IPv4 Address > Open it on another tab > error connection times out
+4. Go to the Networking tab and copy the Private IPv4 address and the Public IPv4 address
+5. Click on the subnet ID
+6. Select the network-concept-subnet, click Route Table tab, then click on the route table link
+7. Select Route Table > Routes tab > Edit Routes
+8. Click Remove to delete the NAT gateway from the route table
+9. Add route > Destination 0.0.0.0/0; Target Intenet Gateway becomes igw-xxxx > Save Changes
+10. Review the new gateway association at the bottom of the page: the subnet is now reachable
+11. Click Services (top left corner) > EC2 > Instances
+12. Select Web Server > Security Tab > Click link of the webserversecuritygroup under Security groups
+13. Click Edit inbound rules
+14. Click Add Rule > Update Type Custom TCP to HTTP > Update source to anywhere IPv4 > Save rules
+15. Click Instance > Select Web Server > Networking tab > Copy Public IPv4 address > Paste into a new tab
+16. The connection from the internet to the Web Server is successful. The connection between the Web Server and the Database Server failed:
+-  ![3](https://user-images.githubusercontent.com/48727972/204059953-45bf2d10-5962-4a7d-9092-a4b6f6535374.png)
+17. Change the security group rules to allow traffic over port 3306 with custom source subnet 10.10.0.0/24
+- ![6](https://user-images.githubusercontent.com/48727972/204060261-066c929b-1a33-43b0-8f68-03ac04a14bae.png)
