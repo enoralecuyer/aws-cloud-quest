@@ -175,3 +175,19 @@ sudo service httpd start
 ## 3. Increase the AWS EC2 Instance Size
 
 1. Go to AWS EC2
+2. Click Instances from the left menu
+3. Select your Instances and review the Details tab
+4. Click Instance Types from the left menu
+5. Search for the t3.large, r5.large, and c5.large types
+6. Select all results and review details (compute, networking, storage, accelerator, and price)
+7. Go back to Instances from the left menu and copy the Public IPv4 Address of your instance
+8. Open your Public IPv4 in your browser:
+- ![1](https://user-images.githubusercontent.com/48727972/204032280-dc359b6e-ce2f-4083-b251-750556f110bb.png)
+9. Go back to Instances from the left menu, select your instance and click Connect
+10. Review the EC2 Instance Connect tab, the Session Manager tab, and the SSH Client tab
+11. Go to the EC2 Instance Connect tab and click Connect. 
+12. The terminal opens in a new tab. Type:
+``` cd sample_add
+ls \\to view the files in the directory
+tail -1f aws_compute_solutions.log \\to check the instance log
+```
