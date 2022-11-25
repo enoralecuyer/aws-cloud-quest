@@ -174,6 +174,12 @@ sudo service httpd start
 
 ## 3. Increase the AWS EC2 Instance Size
 
+Tl;DR
+1. Go to AWS EC2
+2. Stop your instance
+3. Update your instance type
+4. Re-start your instance
+
 1. Go to AWS EC2
 2. Click Instances from the left menu
 3. Select your Instances and review the Details tab
@@ -191,3 +197,39 @@ sudo service httpd start
 ls \\to view the files in the directory
 tail -1f aws_compute_solutions.log \\to check the instance log
 ```
+13. Go back to Instance, select it, click Actions > Instance Settings > Edit user data
+14. Review the commands in the current user data and then click Cancel
+```
+#!/bin/bash
+# Update and install python3
+sudo yum update -y
+sudo yum install -y python3
+
+#Export environment variables
+export APP_NAME=sample_app
+export LAB_ID=399068fe-9ca4-42de-a351-3d0048824a10
+export PROVISION_BUCKET_NAME=pu-base-buckets-v1-provision-lab
+
+#Declare files and create directory
+EC2_FILES="lab app.py requirements.txt templates/index.html"
+mkdir /home/ec2-user/$APP_NAME
+mkdir /home/ec2-user/$APP_NAME/templates
+
+#Copy files from S3
+for file_ in $EC2_FILES
+do
+aws s3 cp s3://$PROVISION_BUCKET_NAME/$LAB_ID/$APP_NAME/$file_ /home/ec2-user/$APP_NAME/$file_
+done
+
+# Install and start app
+mv /home/ec2-user/$APP_NAME/lab /etc/rc.d/init.d/
+chmod +x /etc/rc.d/init.d/lab
+chkconfig lab on
+sudo chown -R ec2-user:ec2-user /home/ec2-user/$APP_NAME
+sudo pip3 install -r /home/ec2-user/$APP_NAME/requirements.txt
+service lab start
+```
+15. Go back to Instances, Click Instance State > Stop Instance > Stop (To change your instance, you must fist stop it)
+16. Under the details tab, the Public IPv4 address and DNS are now empty
+17. Select Instance > Click Actions > Instance Settings > You can change instance type, e.g m4.large, termination protection, or shutdown behavior
+18. Then restart the instance by clicking on Instance > Instance State > Start Instance. The Public IPv4 address and DNS are now generated
