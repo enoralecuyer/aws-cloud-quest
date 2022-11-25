@@ -174,12 +174,13 @@ sudo service httpd start
 
 ## 3. Increase the AWS EC2 Instance Size
 
-Tl;DR
+|| Summary ||
 1. Go to AWS EC2
 2. Stop your instance
 3. Update your instance type
 4. Re-start your instance
 
+|| Extended ||
 1. Go to AWS EC2
 2. Click Instances from the left menu
 3. Select your Instances and review the Details tab
