@@ -234,3 +234,10 @@ service lab start
 16. Under the details tab, the Public IPv4 address and DNS are now empty
 17. Select Instance > Click Actions > Instance Settings > You can change instance type, e.g m4.large, termination protection, or shutdown behavior
 18. Then restart the instance by clicking on Instance > Instance State > Start Instance. The Public IPv4 address and DNS are now generated
+
+
+### 4. AWS Pricing Calculator
+1. Go to https://calculator.aws
+2. Click Create Estimate
+3. Click My Estimate (top left corner)
+4. Click Create Group
