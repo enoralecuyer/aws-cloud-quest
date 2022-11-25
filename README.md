@@ -282,3 +282,9 @@ service lab start
 -  ![3](https://user-images.githubusercontent.com/48727972/204059953-45bf2d10-5962-4a7d-9092-a4b6f6535374.png)
 17. Change the security group rules to allow traffic over port 3306 with custom source subnet 10.10.0.0/24
 - ![6](https://user-images.githubusercontent.com/48727972/204060261-066c929b-1a33-43b0-8f68-03ac04a14bae.png)
+
+### 6 Allow communication between AWS VPCs with VPC Peering
+1. Go to AWS VPC
+2. Click My PVC's and review the current VPCs
+3. Go to AWS EC2
+
