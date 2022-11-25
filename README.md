@@ -240,4 +240,24 @@ service lab start
 1. Go to https://calculator.aws
 2. Click Create Estimate
 3. Click My Estimate (top left corner)
-4. Click Create Group
+4. Click Create Group and rename it to Web Services
+5. Click Add Service
+6. Under Find Service, type ec2, then click Configure on the Amazon EC2
+7. Under Description, type Web Server Estimate
+8. Make sure the location type is Region; 
+9. Select N. Virginia
+10. Click on Advanced Estimate
+11. Make sure the OS is Linux
+12. Under Workload, choose Daily Spike Traffic
+12. Under Workload days, select every single day
+13. Baseline = 2; Peak = 4; Duration of peak = 8 and 0
+14. Under EC2 Instance: vCPUs = 2; GiB = 4; Any Networkwork Performance
+15. Choose the instance type t2.medium
+16. Pricing Model = On-Demand
+17. Click Show Calculation
+18. Click Estimated Workload Hours and review the info, including the # of hours in the utilization summary, then close
+19. Under Amazon Elastic Block Storage (EBS): General Purpose SSD (gp2); Storage Amount 30GB; Snapshot Frequency Weekly; Amount changed per snapshot 1GB
+20. Under Data Transfer: InBound Data Transfer internet (free) 1TB per month; Outbound Data Transfer Internet 0.05 - 0.09 USD per GB, 100GB per month
+21. Click Show Calculation, review your data, then click Save and Add Service
+22. Click View Summary
+23. Click Share > Agree and Continue > Copy public link 
