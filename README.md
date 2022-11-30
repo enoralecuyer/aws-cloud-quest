@@ -313,4 +313,6 @@ service lab start
 27. Go to EC2 > Instance > Select Marketing Server > Connect > Connect
 28. Type ping 172.32.0.10 (they peered but the security specs don't allow them to connect just yet)
 29. Instances > Financial Server > Security tab > Click on the Security server named FinanceServerSecurityGroup
-30. CLick Edit inbound rules >
+30. Click Edit inbound rules > Click Add rule > Custom TCP = All ICMP IPv4 > Source = 10.10.0.0./16 > Save rules
+31. Go to EC2 > Instance > Select Marketing Server > Connect > Connect
+32. 32. Type ping 172.31.0.10 > successful connection!
