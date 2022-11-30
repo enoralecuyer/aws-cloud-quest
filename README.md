@@ -333,3 +333,23 @@ service lab start
 - ![7](https://user-images.githubusercontent.com/48727972/204912221-b9b15d15-4983-455c-8676-ed5377573140.png)
 
 ### 8. Create an AWS DynamoDB Database
+
+1. Go to AWS DynamoDB
+2. Click Create Table
+3. DB name = userVideoHistory > partition key = userId (string) > sort key = lastDateWatched (number) > Default Settings > Create Table
+4. Once the status changes to Active, click the table name
+5. Click Actions > Create item (make sure the db is selected) > userId = 12345-abcd-6789 > lastDateWatched = 1619156406 (UNIX stamp)
+6. Click Add new attribute > String > attribute name = videoId > value = 9875-djac-1859
+7. Click Add new attribute > String > preferredLanguage = English
+8. Click Add new attribute > List > attribute Name = supportedDeviceTypes > Insert a field = String 
+9. Click on the + icon next to supportedDeviceTypes and add Amazon Fire TV
+10. Insert another field type string > cick on the + icon > Amazon Fire Tablet > Click Create Item 
+11. Click on the userId 12345-abcd-6789 (you should be on the Explore item left menu) to edit it
+12. Click Add new attribute > Number > Atrribute name = lastStopTime > Value = 90 > Save Changes
+13. Click Scan/Query items to expand it > Click Query > userId = 12345-abcd-6789 > Greater than 1609477200
+14. Click Scan and Run to see all the items in your DynamoDB table
+15. You can create new items with new ids and new attributes
+- ![6](https://user-images.githubusercontent.com/48727972/204923747-aa5b8e7e-b48c-4d2a-84e4-0006cdf10242.png)
+- ![5](https://user-images.githubusercontent.com/48727972/204923864-255a9f1e-b47a-478f-a0d5-ffed710298ca.png)
+
+
