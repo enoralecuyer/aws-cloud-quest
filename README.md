@@ -321,4 +321,15 @@ service lab start
 32. Type ping 172.31.0.10 > successful connection!
 - ![2](https://user-images.githubusercontent.com/48727972/204892075-fe493c09-4744-44fe-9b4c-7a7055f968a5.png)
 
-### 7. Improve Database Infrastructure with AWS RDS
+### 7. Improve Database Infrastructure with AWS RDS (use multiple Availability Zones (AZ) and a read replica)
+
+1. Go to AWS RDS (Relational Database Service)
+2. Click Database (left menu) > Create Database
+3. Click StandardCreate > MariaDB > leave the engine version untouched > Template = Dev/Prod > DB Instance Identifier = my-database > Enter credentials > DB Instance Class = burstable and db.t3.xlarge > Storage Type = General Purpose SSD > Allocated Storage = 20 > Enable storage autoscaling > Maximum Storage Threshold = 1000 > Multi-AZ Deployment = Create a standby instance > VPC = default > subnet = default 
+4. Click Additional Configuration to expand > Initial database name = my_database > Enable encryption > uncheck performance insight > uncheck monitoring > uncheck enable auto mirror version upgrade > Maintenance window = no preference > Click Create Database
+5. It takes 15-20min for the database to be created. Click refresh icon if needed 
+6. Click my-database
+7. Click Action > Create read-replica
+- ![7](https://user-images.githubusercontent.com/48727972/204912221-b9b15d15-4983-455c-8676-ed5377573140.png)
+
+### 8. Create an AWS DynamoDB Database
