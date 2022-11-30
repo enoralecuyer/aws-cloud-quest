@@ -321,3 +321,4 @@ service lab start
 32. Type ping 172.31.0.10 > successful connection!
 - ![2](https://user-images.githubusercontent.com/48727972/204892075-fe493c09-4744-44fe-9b4c-7a7055f968a5.png)
 
+### 7. Improve Database Infrastructure with AWS RDS
