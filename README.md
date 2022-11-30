@@ -319,3 +319,5 @@ service lab start
 30. Click Edit inbound rules > Click Add rule > Custom TCP = All ICMP IPv4 > Source = 10.10.0.0./16 > Save rules
 31. Go to EC2 > Instance > Select Marketing Server > Connect > Connect
 32. 32. Type ping 172.31.0.10 > successful connection!
+- ![2](https://user-images.githubusercontent.com/48727972/204892075-fe493c09-4744-44fe-9b4c-7a7055f968a5.png)
+
