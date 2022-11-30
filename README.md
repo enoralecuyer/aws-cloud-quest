@@ -285,6 +285,32 @@ service lab start
 
 ### 6 Allow communication between AWS VPCs with VPC Peering
 1. Go to AWS VPC
-2. Click My PVC's and review the current VPCs
+2. Click Your PVCs and review the current VPCs
 3. Go to AWS EC2
-
+4. Click Instance (running)
+5. Click on Financial VPC (it currently doesn't have access to internet, no public IPv4 and private subnet)
+6. Click on Marketing VPC and check its VPC ID
+7. Click Connect > EC2 Instance Connect Tab > Connect
+8. Type ping 172.32.0.10 (connect to the private IPv4 Private address of Financial)
+9. There is no connection because Financial server doesn't have an IPv4 Public address. Ctrl + C to close 
+10. Go back to EC2 > Marketing Server > Click on its ID
+11. Click on the subnet ID (A subnet is a range of IP addresses in the VPC)
+12. Select the checkbox of the subnet > Click on the name of the route table
+13. Click Route tab. There are two routes, one for the local traffic and one for the internet traffic through the internet gateway
+- ![1](https://user-images.githubusercontent.com/48727972/204885341-a0fdec11-7ff6-48a1-97e2-a20332d9b02b.png)
+14. Click Peering Connection (left menu)
+15. Click Create Peering Connection
+16. Name = marketing <> finance
+17. Select a local VPC to peer with (marketing VPC). Make sure Marketing VPC has 10.10.0.0/16 as its CIDR range
+19. VPC ID (Accepter) = Finance VPC. Make sure Marketing VPC has 172.31.0.0/16 as its CIDR range
+20. Click Create Peering Connection
+21. Click Peering Connection (left menu) > Select marketing <> finance > Make sure the status is Pending Acceptance
+22. Click drop down menu Actions > Accept Request > Accept Request
+23. Click Route Tables (left menu) > Select MarketingPublicSubnet1 > Route tab > Edit Route
+24. Click Add Route > Destination = 172.31.0.0/16 > target = pcx- (autopopulates with marketing <> finance) > Saves changes
+25. Click Route tables (left menu) > Select FinancePrivateSubnet1 > Route tab > Edit Route
+26. Click Add Route > Destination = 10.10.0.0/16 > target = pcx- (autopopulates with marketing <> finance) > Saves changes
+27. Go to EC2 > Instance > Select Marketing Server > Connect > Connect
+28. Type ping 172.32.0.10 (they peered but the security specs don't allow them to connect just yet)
+29. Instances > Financial Server > Security tab > Click on the Security server named FinanceServerSecurityGroup
+30. CLick Edit inbound rules >
