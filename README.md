@@ -284,6 +284,9 @@ service lab start
 - ![6](https://user-images.githubusercontent.com/48727972/204060261-066c929b-1a33-43b0-8f68-03ac04a14bae.png)
 
 ### 6 Allow communication between AWS VPCs with VPC Peering
+
+|| starts at #14 ||
+
 1. Go to AWS VPC
 2. Click Your PVCs and review the current VPCs
 3. Go to AWS EC2
