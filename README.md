@@ -332,7 +332,7 @@ service lab start
 7. Click Action > Create read-replica
 - ![7](https://user-images.githubusercontent.com/48727972/204912221-b9b15d15-4983-455c-8676-ed5377573140.png)
 
-### 8. Create an AWS DynamoDB Database
+### 8. Create an AWS DynamoDB Database (NoSQL)
 
 1. Go to AWS DynamoDB
 2. Click Create Table
@@ -352,4 +352,10 @@ service lab start
 - ![6](https://user-images.githubusercontent.com/48727972/204923747-aa5b8e7e-b48c-4d2a-84e4-0006cdf10242.png)
 - ![5](https://user-images.githubusercontent.com/48727972/204923864-255a9f1e-b47a-478f-a0d5-ffed710298ca.png)
 
+### 9 Create a File System with AWS EFS (ELastic File System)
 
+|| The AWS EFS will need to be accessible for 3 servers ||
+
+### 10 AWS IAM (Identity and Access Management)
+
+|| create users, groups, and permissions ||
