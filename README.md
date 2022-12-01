@@ -359,3 +359,11 @@ service lab start
 ### 10 AWS IAM (Identity and Access Management)
 
 || create users, groups, and permissions ||
+
+1. Go to AWS IAM (Identity and Access Management)
+2. Click User Groups (left pannel) > Click Create Group > User group name = SupportEngineers > Search for the Attach Permissions Policies = AmazonEC2ReadOnlyAccess > Select it > Click Create Group
+3. Click Users (left pannel) > Click Add Users > user name = support-engineer-1 > Click and enable Access Key - Programmatic Access > Click and enable password AWS Console Management Access > Choose Custom password > Enter a password > Uncheck Require Password Reset > Click Next: Permissions
+4. Click Add user to group > Select SupportEngineers > Click Next: Tags
+5. To add Tag, Key = job title > Value = Support Engineer > Click Next: Review > Click Create User
+6. Copy the AWS Console Management Access link (e.g. https://140768770893.signin.aws.amazon.com/console) > Click Close
+7. Open a new incognito window and paste the link. Enter your username support-engineer-1 and password > 
