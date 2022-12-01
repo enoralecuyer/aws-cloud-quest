@@ -352,13 +352,7 @@ service lab start
 - ![6](https://user-images.githubusercontent.com/48727972/204923747-aa5b8e7e-b48c-4d2a-84e4-0006cdf10242.png)
 - ![5](https://user-images.githubusercontent.com/48727972/204923864-255a9f1e-b47a-478f-a0d5-ffed710298ca.png)
 
-### 9 Create a File System with AWS EFS (ELastic File System)
-
-|| The AWS EFS will need to be accessible by 3 servers. Mount EFS into 2 EC2 Instances ||
-
-1. Go to AWS EC2
-
-### 10 AWS IAM (Identity and Access Management)
+### 9. AWS IAM (Identity and Access Management)
 
 || create users, groups, and permissions ||
 
@@ -373,3 +367,10 @@ service lab start
 9. Click instances (running) > Choose the Web Server > Instance State > Terminate Instance > Terminate > Error confirms that you are not able to termine the instance
 10. You can add new permissions by clicking on User Group > select it > Permission tab > Add permission > Search it > Click it > Add permission
 - ![5](https://user-images.githubusercontent.com/48727972/205126529-cd43df8f-6fcb-4c0f-af89-de32f508d49d.png)
+
+
+### 10. Create a File System with AWS EFS (ELastic File System)
+
+|| The AWS EFS will need to be accessible by 3 servers. Mount EFS into 2 EC2 Instances ||
+
+1. Go to AWS EC2
