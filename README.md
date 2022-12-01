@@ -367,3 +367,7 @@ service lab start
 5. To add Tag, Key = job title > Value = Support Engineer > Click Next: Review > Click Create User
 6. Copy the AWS Console Management Access link (e.g. https://140768770893.signin.aws.amazon.com/console) > Click Close
 7. Open a new incognito window and paste the link. Enter your username support-engineer-1 and password > 
+8. As your new user, click EC2 > Make sure your region is US East (N. Virginia) 
+9. Click instances (running) > Choose the Web Server > Instance State > Terminate Instance > Terminate > Error confirms that you are not able to termine the instance
+10. You can add new permissions by clicking on User Group > select it > Permission tab > Add permission > Search it > Click it > Add permission
+- ![5](https://user-images.githubusercontent.com/48727972/205126529-cd43df8f-6fcb-4c0f-af89-de32f508d49d.png)
