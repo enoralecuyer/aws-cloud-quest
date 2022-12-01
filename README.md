@@ -236,7 +236,7 @@ service lab start
 18. Then restart the instance by clicking on Instance > Instance State > Start Instance. The Public IPv4 address and DNS are now generated
 
 
-### 4. Create price estimates with the AWS Pricing Calculator
+## 4. Create price estimates with the AWS Pricing Calculator
 1. Go to https://calculator.aws
 2. Click Create Estimate
 3. Click My Estimate (top left corner)
@@ -262,7 +262,7 @@ service lab start
 22. Click View Summary
 23. Click Share > Agree and Continue > Copy public link 
 
-### 5. Troubleshoot and connect Web Server and Database Server
+## 5. Troubleshoot and connect Web Server and Database Server
 1. Go to EC2
 2. Click Instances
 3. Select the Web Server and copy the Public IPv4 Address > Open it on another tab > error connection times out
@@ -283,7 +283,7 @@ service lab start
 17. Change the security group rules to allow traffic over port 3306 with custom source subnet 10.10.0.0/24
 - ![6](https://user-images.githubusercontent.com/48727972/204060261-066c929b-1a33-43b0-8f68-03ac04a14bae.png)
 
-### 6 Allow communication between AWS VPCs with VPC Peering
+## 6 Allow communication between AWS VPCs with VPC Peering
 
 || starts at #14 ||
 
@@ -321,7 +321,7 @@ service lab start
 32. Type ping 172.31.0.10 > successful connection!
 - ![2](https://user-images.githubusercontent.com/48727972/204892075-fe493c09-4744-44fe-9b4c-7a7055f968a5.png)
 
-### 7. Improve Database Infrastructure with AWS RDS (use multiple Availability Zones (AZ) and a read replica)
+## 7. Improve Database Infrastructure with AWS RDS (use multiple Availability Zones (AZ) and a read replica)
 
 1. Go to AWS RDS (Relational Database Service)
 2. Click Database (left menu) > Create Database
@@ -332,7 +332,7 @@ service lab start
 7. Click Action > Create read-replica
 - ![7](https://user-images.githubusercontent.com/48727972/204912221-b9b15d15-4983-455c-8676-ed5377573140.png)
 
-### 8. Create an AWS DynamoDB Database (NoSQL)
+## 8. Create an AWS DynamoDB Database (NoSQL)
 
 1. Go to AWS DynamoDB
 2. Click Create Table
@@ -352,7 +352,7 @@ service lab start
 - ![6](https://user-images.githubusercontent.com/48727972/204923747-aa5b8e7e-b48c-4d2a-84e4-0006cdf10242.png)
 - ![5](https://user-images.githubusercontent.com/48727972/204923864-255a9f1e-b47a-478f-a0d5-ffed710298ca.png)
 
-### 9. AWS IAM (Identity and Access Management)
+## 9. AWS IAM (Identity and Access Management)
 
 || create users, groups, and permissions ||
 
@@ -369,7 +369,7 @@ service lab start
 - ![5](https://user-images.githubusercontent.com/48727972/205126529-cd43df8f-6fcb-4c0f-af89-de32f508d49d.png)
 
 
-### 10. Create a File System with AWS EFS (ELastic File System)
+## 10. Create a File System with AWS EFS (ELastic File System)
 
 || The AWS EFS will need to be accessible by 3 servers. Mount EFS into 2 EC2 Instances ||
 
