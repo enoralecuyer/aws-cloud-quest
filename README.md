@@ -354,7 +354,9 @@ service lab start
 
 ### 9 Create a File System with AWS EFS (ELastic File System)
 
-|| The AWS EFS will need to be accessible for 3 servers ||
+|| The AWS EFS will need to be accessible by 3 servers. Mount EFS into 2 EC2 Instances ||
+
+1. Go to AWS EC2
 
 ### 10 AWS IAM (Identity and Access Management)
 
