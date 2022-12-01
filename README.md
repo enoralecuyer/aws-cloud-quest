@@ -374,3 +374,18 @@ service lab start
 || The AWS EFS will need to be accessible by 3 servers. Mount EFS into 2 EC2 Instances ||
 
 1. Go to AWS EC2
+2. Click Instances (left pannel) > Review the three instances and their availability zones 
+3. Click Security Groups (left pannel) > Create Security Group > Security Group Name = PetModels-EFS-1-SG > Description = Restrict access to webservers only > Click X to remove the existing VPC and update it > Under Inbound rules, click Add Rule > Type = NFS (Network File System) > Source = security groups is web service > Create Security Group > Review the name of the security group
+4. Go to AWS EFS
+5. Click Create File System > Name = PetModels-EFS-1 > VPC = Pet models > Click Customize > Disable enable automatic backup > Transition into AI = none > Click Next > Remove all Mount Targets > Keep us-east-1a with security group petModel > Click Next > Click Next > Click Create
+6. A green banner confirms that the EFS was created with a name > Click on the name of the EFS > Click Attach > Copy onto a separate notepad the script unedr EFS mount helper (below) > Click Close
+```
+sudo mount -t efs -o tls fs-03c1e1d600c76d897:/ efs)
+```
+7. Go to AWS EC2
+8. Click Instances (left pannel)
+9. Select PetModels-A > Click Connect > Click Connect > Enter Script (below)
+```
+sudo yum install -y amazon-efs-utils
+mkdir data
+```
