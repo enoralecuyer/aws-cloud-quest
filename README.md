@@ -390,6 +390,7 @@ sudo yum install -y amazon-efs-utils
 mkdir data
 ls
 sudo mount -t efs -o tls fs-03c1e1d600c76d897:/ data
+cd data
 sudo bash -c "cat >> efs-1-setup.log"
 efs-1 mounted in site A
 Ctrl + C (to end)
