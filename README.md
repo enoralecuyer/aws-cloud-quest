@@ -400,4 +400,10 @@ cat efs-1-setup.log
 10. Go to EFS
 11. Click on the name of the EFS > Click Network tab > Click Manage > Click Add Mount Target > Choose the subnet and the Security Group that you created > Click Save > The new network will have the status Available (refresh if needed)
 12. Go to AWS EC2
-13. Repeat step 9
+13. Repeat step 9 for each other instance
+
+## 11. AWS EC2 Auto Scaling (min, max, schedule, policy, monitoring)
+
+1. Go to EC2
+2. Click Instances (left pannel) > Click the Instance ID > Copy the Public IPv4 address > Open a new tab > Type http:// and paste the public IPv4 address and make sure the server is up
+3. Go back to Instances (left pannel) > Select your instance > Actions > Images and templates > Create Image > name = GameServer > Description = undefined
