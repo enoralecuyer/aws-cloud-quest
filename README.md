@@ -412,3 +412,10 @@ cat efs-1-setup.log
 6. Click Auto Scaling groups (left pannel) > Create Auto Scaling Group > Name = RegularCustomerGameServer > Lauch Template = GameServerTemplate > Click Next > VPC = autos scaling and healing game server VPC > Choose both subnets > Click Next > Select No Load Balancer > Health check grace period = 240 sec > Click Next > Group Size Desired capacity = 2 > Min = 2 > Max = 4 > Scaling Policy = RegularCustomerGameServer > Scaling policy name = CPU Utilization > Metric type = average CPU utilization > target value = 70 > Click Next > Click Skip to review > Click create auto scaling group 
 7. Click on the new Auto scaling group > Click Activity tab > Make sure that two instances were created under Activity History, for desired and actual capacity > Click Automatic Scaling tab > Click Create Scheduled Action > Name = SecondWaveOfRegulars > Desired Capacity = 3 > Min = 3 > Max = 4 > Recurrence = every week > Update Specific Start time and hour > Click create
 8. You can create a new scheduled action with a max of 0 at 1am to end the server access for a group
+
+## 12. Highly Available Web Applications
+
+|| Create an Auto Scaling group Caccross multiple Available Zones ||
+|| Create an Elastic Loan Balancer (ELB) ||
+|| Attach an auto scaling group to an ELB ||
+|| Create an ELB Health check for EC2 Instances ||
