@@ -433,3 +433,4 @@ cat efs-1-setup.log
 11. Click Instances (left pannel) > Select the instance > Click Instance State > Terminate instance (this instance is in the public subnet) > Wait for a few minutes > A new instance has been automatically created, with a private subnet > 
 12. Click Auto Scaling groups (left pannel) > Select the instance > Click Activity tab > Make sure the status is successful and terminated for the old instance > refresh the website tab, the instance number is updated > now click on Network and Edit > Add both private subnets > Click Update > Now click Group Details > Edit > desired capacity = 2, min = 1, max = 2 > Click Update > Review the successful status of both instances under the Activity tab
 13. Click Instances (left pannel) > Choose newest instance > Click Networkingn tab > make sure it is in the private subnet 2 > 
+14. To add new private subnets, make sure to increase your desired capacity, and then refresh your Instance page :)
