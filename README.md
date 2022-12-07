@@ -419,3 +419,9 @@ cat efs-1-setup.log
 || Create an Elastic Loan Balancer (ELB) ||
 || Attach an auto scaling group to an ELB ||
 || Create an ELB Health check for EC2 Instances ||
+
+1. Go to AWS EC2
+2. Click Auto-scaling groups (left pannel)
+3. Click the auto-scaling group and check the max min capacity. 
+4. Click Instance Management tab and make sure there is at least one instance
+5. CLick Details tab > Under Load Balancing click Edit > Click Add a new loan balancer > Choose Application Loan Balancer > Choose Internet facing > Under Availability Zones and subnets, choose all three Zones > Under Default Routing, choose Create a target group > Click Update
