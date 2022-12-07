@@ -424,4 +424,8 @@ cat efs-1-setup.log
 2. Click Auto-scaling groups (left pannel)
 3. Click the auto-scaling group and check the max min capacity. 
 4. Click Instance Management tab and make sure there is at least one instance
-5. CLick Details tab > Under Load Balancing click Edit > Click Add a new loan balancer > Choose Application Loan Balancer > Choose Internet facing > Under Availability Zones and subnets, choose all three Zones > Under Default Routing, choose Create a target group > Click Update
+5. Click Details tab > Under Load Balancing click Edit > Click Add a new loan balancer > Choose Application Loan Balancer > Choose Internet facing > Under Availability Zones and subnets, choose all three Zones > Under Default Routing, choose Create a target group > Click Update
+6. Click Security Groups (left pannel) > Click Create Security Group > Type Name > Type Description > Choose VPC > Under Inbound rules, click Add Rule > Type = HTTP > Source = 0.0.0.0/0 > Outbound rule type = HTTP > Source = security group > Click Create Security Group
+7. Click Security Groups (left pannel) > Select the web server security group > Click Actions > Edit inbound rules > Delete > Add rule > Type = HTTP > Source = security group load balancer > Click Save rules
+8. Click Load Balancer (left pannel) > Click on the loan balancer > Click Security Tab > Click Edit Security Groups > Add the loan balancer security group and remove the web server security group > Click Save changes > Copy the DNS of the Amazon Load Balancer (ALB) > Paste the DNS in a new tab to confirm that the website is up and behind an ALB > add /healthy at the end of the url to do a health check on the root path
+9. Click Target Groups (left pannel) > Select the existing target group > Click Health check tab > Click Edit > type /health in the health check path > Click Advanced health check settings
